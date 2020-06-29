@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Моя страница</title>
+</head>
+<body>
+    {% block nav %}
+    <div>
+        <a href="/">Домашняя страница</a> /
+        <a href="{{ url_for('photos') }}">Мои фото</a>/
+        <a href="{{ url_for('hobby') }}">Хобби</a>
+    </div>
+    {% endblock %}
+
+    {% block content %}
+        <h1>Welcome</h1>
+        <div>It's my page</div>
+    {% endblock %}
+</body>
+</html>
